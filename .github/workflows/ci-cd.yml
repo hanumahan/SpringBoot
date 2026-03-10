@@ -23,7 +23,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build JAR with Gradle
-        run: ./gradlew clean build-x test
+        run: ./gradlew clean build -x test
 
       - name: SonarCloud Scan
         env:
