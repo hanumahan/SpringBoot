@@ -28,11 +28,7 @@ jobs:
       - name: SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew sonarqube \
-          -Dsonar.projectKey=hanumahan_SpringBoot \
-          -Dsonar.organization=hanumahan \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=$SONAR_TOKEN
+        run: ./gradlew sonarqube
 
       - name: Login to DockerHub
         uses: docker/login-action@v3
